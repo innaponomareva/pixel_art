@@ -1,0 +1,12 @@
+.custom-tooltip {
+  padding: 0.2rem;
+  background-color: #212529;
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  position: absolute;
+  left: 110%;
+  z-index: 10;
+  box-sizing: content-box;
+}

@@ -1,0 +1,16 @@
+.paint-bucket {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.paint-bucket-btn {
+  padding: 0.2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.paint-bucket-cursor {
+  position: absolute;
+  z-index: 100;
+  display: none;
+}

@@ -1,0 +1,19 @@
+.color-palette {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.color-palette div {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: 0.5px solid #676c71;
+}
+
+@media only screen and (max-width: 500px) {
+  .color-palette {
+    flex-direction: row;
+    height: fit-content !important;
+  }
+}

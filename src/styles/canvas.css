@@ -1,0 +1,17 @@
+.canvas-container {
+  position: relative;
+}
+canvas {
+  cursor: pointer;
+  image-rendering: pixelated;
+  border: 1px solid #676c71;
+}
+.grid-overlay {
+  pointer-events: none;
+  display: grid;
+  position: absolute;
+}
+
+.grid-overlay div {
+  border: 0.5px solid hsla(210, 11%, 71%, 0.2);
+}

@@ -1,0 +1,42 @@
+.listbox {
+  position: relative;
+}
+.listbox-btn {
+  width: 100%;
+  min-width: 8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid #676c71;
+  font-size: 0.9rem;
+  color: #676c71;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.listbox-options {
+  padding: 0.5rem 0;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #676c71;
+  border-top: none;
+  left: 0;
+  right: 0;
+}
+.listbox-option {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #676c71;
+}
+.listbox-option-selected {
+  font-weight: bold;
+}
+.listbox-option:hover {
+  background-color: #adb5bd31;
+}
+.selected-icon {
+  font-size: 1.5rem;
+}

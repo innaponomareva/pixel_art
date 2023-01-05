@@ -1,0 +1,13 @@
+.btn {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #676c71;
+  font-size: 0.9rem;
+  color: #676c71;
+  padding: 0.5rem;
+  cursor: pointer;
+}

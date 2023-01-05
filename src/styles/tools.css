@@ -1,0 +1,22 @@
+.tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tools-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #676c71;
+  color: #676c71;
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .tools-container {
+    flex-direction: row;
+    height: fit-content !important;
+  }
+}
