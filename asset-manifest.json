@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pixel_art/static/css/main.4855f6bd.css",
+    "main.js": "/pixel_art/static/js/main.61b07f42.js",
+    "index.html": "/pixel_art/index.html",
+    "main.4855f6bd.css.map": "/pixel_art/static/css/main.4855f6bd.css.map",
+    "main.61b07f42.js.map": "/pixel_art/static/js/main.61b07f42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4855f6bd.css",
+    "static/js/main.61b07f42.js"
+  ]
+}
