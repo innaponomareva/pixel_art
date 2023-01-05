@@ -11,7 +11,7 @@
   border: 0.5px solid #676c71;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 506px) {
   .color-palette {
     flex-direction: row;
     height: fit-content !important;
