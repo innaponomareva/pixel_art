@@ -10,7 +10,7 @@ Application for creating pixel art.
    - 16×16
    - 32×32
 4. Download option (JPG / PNG / GIF)
-5. Paint-Bucket (fills neighbour pixel of the same color)
+5. Paint-Bucket (fills neighbour pixels of the same color)
 
 ## 2. Stack
 
