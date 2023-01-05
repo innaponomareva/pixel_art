@@ -1,10 +1,11 @@
 .canvas-container {
   position: relative;
+  border: 1px solid #676c71;
 }
 canvas {
+  margin: 0;
   cursor: pointer;
   image-rendering: pixelated;
-  border: 1px solid #676c71;
 }
 .grid-overlay {
   pointer-events: none;

@@ -11,7 +11,13 @@ interface CanvasProps {
 const Canvas = forwardRef<HTMLCanvasElement, CanvasProps>(
   ({ sideCellCount, canvasLength, isGridVisible, onCanvasClick }, ref) => {
     return (
-      <div className="canvas-container">
+      <div
+        className="canvas-container"
+        style={{
+          width: `${canvasLength + 2}px`,
+          height: `${canvasLength + 2}px`,
+        }}
+      >
         {isGridVisible && (
           <div
             className="grid-overlay"
