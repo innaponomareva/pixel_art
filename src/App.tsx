@@ -20,10 +20,12 @@ import { onClearCanvas } from "./utils/onClearCanvas";
 import { createGridCoordinatesArray } from "./utils/createGridCoordinatesArray";
 import { moveCursor } from "./utils/moveCursor";
 import { onPaintBucketClick } from "./utils/onPaintBucketClick";
+import { useCallback } from "react";
 
 const App: React.FC = () => {
   const canvasRef: React.MutableRefObject<HTMLCanvasElement> = useRef();
   const paintBucketCursorRef: React.MutableRefObject<SVGSVGElement> = useRef();
+  const [width, setWidth] = useState(0);
   const [canvasLength, setCanvasLength] = useState(504);
   const [isGridVisible, setIsGridVisible] = useState(true);
   const [activeColor, setActiveColor] = useState("#000000");
@@ -35,21 +37,25 @@ const App: React.FC = () => {
   const [isPaintBucketActive, setIsPaintBucketActive] = useState(false);
   const [history, setHistory] = useState<IColorHistory>({});
 
+  const setCanvasSizes = useCallback(() => {
+    if (sideCellCount === 32) {
+      setCellLength(width > 506 ? 16 : 12);
+      setCanvasLength(width > 506 ? 512 : 384);
+    } else if (sideCellCount === 16) {
+      setCellLength(width > 506 ? 32 : 24);
+      setCanvasLength(width > 506 ? 512 : 384);
+    } else if (sideCellCount === 12) {
+      setCellLength(width > 506 ? 42 : 32);
+      setCanvasLength(width > 506 ? 504 : 384);
+    } else if (sideCellCount === 8) {
+      setCellLength(width > 506 ? 63 : 48);
+      setCanvasLength(width > 506 ? 504 : 384);
+    }
+  }, [width, sideCellCount]);
+
   useEffect(() => {
     if (canvasRef.current) {
-      if (sideCellCount === 32) {
-        setCellLength(16);
-        setCanvasLength(512);
-      } else if (sideCellCount === 16) {
-        setCellLength(32);
-        setCanvasLength(512);
-      } else if (sideCellCount === 12) {
-        setCellLength(42);
-        setCanvasLength(504);
-      } else if (sideCellCount === 8) {
-        setCellLength(63);
-        setCanvasLength(504);
-      }
+      setCanvasSizes();
       const gridCoordinatesArray = createGridCoordinatesArray(
         cellLength,
         sideCellCount
@@ -61,7 +67,7 @@ const App: React.FC = () => {
       );
       setHistory(colorHistoryObject);
     }
-  }, [sideCellCount, cellLength]);
+  }, [sideCellCount, cellLength, setCanvasSizes, width]);
 
   useEffect(() => {
     if (isPaintBucketActive)
@@ -73,6 +79,15 @@ const App: React.FC = () => {
     const splitted = selectedOption.split("×");
     setSideCellCount(+splitted[0]);
   }, [selectedOption]);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div>
