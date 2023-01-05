@@ -20,3 +20,7 @@ Application for creating pixel art.
 4. gifshot
 5. clsx
 6. React Icons
+
+## 3. GitHub Pages
+
+https://innaponomareva.github.io/pixel_art/
