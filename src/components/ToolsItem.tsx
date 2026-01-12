@@ -3,8 +3,8 @@ import {
   JSXElementConstructor,
   ReactElement,
   useState,
-} from "react";
-import Tooltip from "./Tooltip";
+} from 'react';
+import Tooltip from './Tooltip';
 
 interface ToolsItemProps {
   children: ReactElement<any, string | JSXElementConstructor<any>>;

@@ -1,8 +1,8 @@
-import clsx from "clsx";
-import { forwardRef, ReactNode } from "react";
+import clsx from 'clsx';
+import { forwardRef, ReactNode } from 'react';
 
 interface ButtonProps {
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   hover?: boolean;
   disabled?: boolean;
   className?: string;
@@ -12,7 +12,7 @@ interface ButtonProps {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      type = "button",
+      type = 'button',
       hover = false,
       className,
       disabled = false,
@@ -25,13 +25,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         type={type}
-        className={clsx("btn", className)}
+        className={clsx('btn', className)}
         onMouseEnter={
           hover
             ? (e) => {
                 const button = e.target as HTMLElement;
-                button.style.backgroundColor = "#676c71";
-                button.style.color = "#fff";
+                button.style.backgroundColor = '#676c71';
+                button.style.color = '#fff';
               }
             : null
         }
@@ -39,8 +39,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           hover
             ? (e) => {
                 const button = e.target as HTMLElement;
-                button.style.backgroundColor = "transparent";
-                button.style.color = "#676c71";
+                button.style.backgroundColor = 'transparent';
+                button.style.color = '#676c71';
               }
             : null
         }

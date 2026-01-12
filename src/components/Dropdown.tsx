@@ -1,7 +1,7 @@
-import { Listbox } from "@headlessui/react";
-import clsx from "clsx";
-import { Fragment } from "react";
-import { BsChevronDown, BsCheck } from "react-icons/bs";
+import { Listbox } from '@headlessui/react';
+import clsx from 'clsx';
+import { Fragment } from 'react';
+import { BsChevronDown, BsCheck } from 'react-icons/bs';
 
 interface DropdownProps {
   options: string[];
@@ -33,8 +33,8 @@ const Dropdown: React.FC<DropdownProps> = ({
             {({ active, selected }) => (
               <li
                 className={clsx(
-                  "listbox-option",
-                  selected && "listbox-option-selected"
+                  'listbox-option',
+                  selected && 'listbox-option-selected'
                 )}
                 onClick={onOptionClick ? () => onOptionClick(option) : null}
               >

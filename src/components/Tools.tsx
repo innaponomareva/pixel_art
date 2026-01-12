@@ -1,5 +1,5 @@
-import { Children, JSXElementConstructor, ReactElement } from "react";
-import ToolsItem from "./ToolsItem";
+import { Children, JSXElementConstructor, ReactElement } from 'react';
+import ToolsItem from './ToolsItem';
 
 interface ToolsProps {
   children: ReactElement<any, string | JSXElementConstructor<any>>[];

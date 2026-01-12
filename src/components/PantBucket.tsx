@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import { forwardRef } from "react";
+import clsx from 'clsx';
+import { forwardRef } from 'react';
 
 interface PaintBucketProps {
   activeColor: string;
@@ -7,11 +7,11 @@ interface PaintBucketProps {
   onClickHandler?: () => void;
 }
 const PaintBucket = forwardRef<SVGSVGElement, PaintBucketProps>(
-  ({ activeColor = "black", className, onClickHandler, ...restProps }, ref) => {
+  ({ activeColor = 'black', className, onClickHandler, ...restProps }, ref) => {
     return (
       <svg
         ref={ref}
-        className={clsx("paint-bucket", className)}
+        className={clsx('paint-bucket', className)}
         onClick={onClickHandler ? onClickHandler : null}
         viewBox="0 0 235.65 284.91"
         {...restProps}

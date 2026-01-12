@@ -1,26 +1,26 @@
-import { useEffect, useRef, useState } from "react";
-import Button from "./components/Button";
-import Canvas from "./components/Canvas";
-import ColorPalette from "./components/ColorPalette";
-import Dropdown from "./components/Dropdown";
-import Checkbox from "./components/Checkbox";
+import { useEffect, useRef, useState } from 'react';
+import Button from './components/Button';
+import Canvas from './components/Canvas';
+import ColorPalette from './components/ColorPalette';
+import Dropdown from './components/Dropdown';
+import Checkbox from './components/Checkbox';
 import {
   colorsOptions,
   gridSizeOptions,
   imgFormatOptions,
-} from "./lib/options";
-import PaintBucket from "./components/PantBucket";
-import ColorInput from "./components/ColorInput";
-import Tools from "./components/Tools";
-import { IColorHistory } from "./models/IColorHistory";
-import { onCanvasDownload } from "./utils/onCanvasDownload";
-import { onCanvasClick } from "./utils/onCanvasClick";
-import { startCanvas } from "./utils/startCanvas";
-import { onClearCanvas } from "./utils/onClearCanvas";
-import { createGridCoordinatesArray } from "./utils/createGridCoordinatesArray";
-import { moveCursor } from "./utils/moveCursor";
-import { onPaintBucketClick } from "./utils/onPaintBucketClick";
-import { useCallback } from "react";
+} from './lib/options';
+import PaintBucket from './components/PantBucket';
+import ColorInput from './components/ColorInput';
+import Tools from './components/Tools';
+import { IColorHistory } from './models/IColorHistory';
+import { onCanvasDownload } from './utils/onCanvasDownload';
+import { onCanvasClick } from './utils/onCanvasClick';
+import { startCanvas } from './utils/startCanvas';
+import { onClearCanvas } from './utils/onClearCanvas';
+import { createGridCoordinatesArray } from './utils/createGridCoordinatesArray';
+import { moveCursor } from './utils/moveCursor';
+import { onPaintBucketClick } from './utils/onPaintBucketClick';
+import { useCallback } from 'react';
 
 const App: React.FC = () => {
   const canvasRef: React.MutableRefObject<HTMLCanvasElement> = useRef();
@@ -28,12 +28,12 @@ const App: React.FC = () => {
   const [width, setWidth] = useState(0);
   const [canvasLength, setCanvasLength] = useState(504);
   const [isGridVisible, setIsGridVisible] = useState(true);
-  const [activeColor, setActiveColor] = useState("#000000");
+  const [activeColor, setActiveColor] = useState('#000000');
   const [cellLength, setCellLength] = useState(0);
   const [sideCellCount, setSideCellCount] = useState(8);
-  const [selectedOption, setSelectedOption] = useState("8×8");
+  const [selectedOption, setSelectedOption] = useState('8×8');
   const [selectedImgFormatOption, setSelectedImgFormatOption] =
-    useState("Download as");
+    useState('Download as');
   const [isPaintBucketActive, setIsPaintBucketActive] = useState(false);
   const [history, setHistory] = useState<IColorHistory>({});
 
@@ -71,12 +71,12 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (isPaintBucketActive)
-      document.addEventListener("mousemove", moveCursor, true);
-    else document.removeEventListener("mousemove", moveCursor, true);
+      document.addEventListener('mousemove', moveCursor, true);
+    else document.removeEventListener('mousemove', moveCursor, true);
   }, [isPaintBucketActive]);
 
   useEffect(() => {
-    const splitted = selectedOption.split("×");
+    const splitted = selectedOption.split('×');
     setSideCellCount(+splitted[0]);
   }, [selectedOption]);
 
@@ -85,8 +85,8 @@ const App: React.FC = () => {
     function handleResize() {
       setWidth(window.innerWidth);
     }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -104,7 +104,7 @@ const App: React.FC = () => {
             setSelectedOption={setSelectedOption}
           />
           <div className="painting-container">
-            <Tools tooltipList={["Color Picker", "Paint Bucket"]}>
+            <Tools tooltipList={['Color Picker', 'Paint Bucket']}>
               <ColorInput
                 activeColor={activeColor}
                 setActiveColor={setActiveColor}

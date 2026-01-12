@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { BsCheck } from "react-icons/bs";
+import { ReactNode } from 'react';
+import { BsCheck } from 'react-icons/bs';
 
 interface CheckboxProps {
   name: string;
