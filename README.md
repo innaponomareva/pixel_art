@@ -17,9 +17,6 @@ The app allows users to draw pixel images, resize the grid, select colors, and e
 - **Paint Bucket tool** (flood fill for connected pixels)
 - **Download artwork** as JPG / PNG / GIF
 
-<img width="652" height="666" alt="Screenshot 2026-01-12 at 03 34 48" src="https://github.com/user-attachments/assets/9acd0223-5b63-4cbe-9565-6c7c4c4a0694" />
-
-
 ## 🧩 Tech Stack
 
 - **React**
@@ -29,4 +26,4 @@ The app allows users to draw pixel images, resize the grid, select colors, and e
 - **clsx**
 - **React Icons**
 
-
+<img width="652" height="666" alt="Screenshot 2026-01-12 at 03 34 48" src="https://github.com/user-attachments/assets/9acd0223-5b63-4cbe-9565-6c7c4c4a0694" />
