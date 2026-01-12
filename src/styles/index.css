@@ -1,12 +1,12 @@
-@import "./colorPalette.css";
-@import "./canvas.css";
-@import "./button.css";
-@import "./checkbox.css";
-@import "./dropdown.css";
-@import "./pantBucket.css";
-@import "./colorInput.css";
-@import "./tools.css";
-@import "./tooltip.css";
+@import './colorPalette.css';
+@import './canvas.css';
+@import './button.css';
+@import './checkbox.css';
+@import './dropdown.css';
+@import './pantBucket.css';
+@import './colorInput.css';
+@import './tools.css';
+@import './tooltip.css';
 
 * {
   padding: 0;
@@ -14,22 +14,22 @@
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .app-container {
   width: fit-content;
   margin: 0 auto;
-  padding: 5rem 0 0;
+  padding: 2rem 0;
 }
 .content-container {
   display: flex;
