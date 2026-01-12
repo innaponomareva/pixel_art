@@ -1,29 +1,26 @@
-Pixel Art Editor 🎨
+## 1. Task
 
-A simple and clean pixel-art editor built with React + TypeScript.
-The app allows users to draw pixel images, resize the grid, select colors, and export artwork in multiple formats.
+Application for creating pixel art.
 
-👉 Live Demo:
+1. Base grid 8×8 rendering
+2. Possibility to choose color from a color palette
+3. Possibility to choose a grid size
+   - 8×8
+   - 12×12
+   - 16×16
+   - 32×32
+4. Download option (JPG / PNG / GIF)
+5. Paint-Bucket (fills neighbour pixels of the same color)
+
+## 2. Stack
+
+1. React
+2. TypeScript
+3. headlessui
+4. gifshot
+5. clsx
+6. React Icons
+
+## 3. GitHub Pages
+
 https://innaponomareva.github.io/pixel_art/
-
-⸻
-
-🚀 Features
-	•	Base grid rendering (8×8 by default)
-	•	Color palette with instant selection
-	•	Resizable grid:
-   	•	8×8
-   	•	12×12
-   	•	16×16
-   	•	32×32
-	•	Paint Bucket tool (flood fill on connected pixels)
-	•	Download artwork as JPG / PNG / GIF
-	•	Responsive layout, optimized for simple UI flow
-
-🧩 Tech Stack
-	•	React
-	•	TypeScript
-	•	Headless UI
-	•	gifshot (GIF export)
-	•	clsx
-	•	React Icons
